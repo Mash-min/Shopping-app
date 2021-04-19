@@ -16,7 +16,8 @@ class Store extends Model
         'address',
         'contact',
         'description',
-        'image'
+        'image',
+        'status'
     ];
 
     protected $attributes = [

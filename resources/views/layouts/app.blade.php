@@ -43,12 +43,12 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{ route('profile') }}">Profile</a></li>
-                                                    <li>
+                                                    <!-- <li>
                                                         <a href="{{ route('notifications') }}">
                                                             Notifications 
                                                             <span class="badge navbar-badge">4</span>
                                                         </a>
-                                                    </li>
+                                                    </li> -->
                                                     <li><a href="{{ route('my_cart') }}">My Cart</a></li>
                                                     <li><a href="{{ route('my_orders') }}">My Orders</a></li>
                                                     <li><a href="{{ route('saved_products') }}">Saved Products</a></li>

@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminPagesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Json\ProductJsonController;
 use App\Http\Controllers\Json\StoreJsonController;
+use App\Http\Controllers\StoreController;
 
 Route::group(['prefix' => 'admin', 'middleware' => 'checkAdmin', 'middleware' => 'auth'], function() {
    Route::get('/dashboard',        [AdminPagesController::class, 'dashboard'])->name('dashboard'); 
@@ -35,6 +36,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'checkAdmin', 'middleware' =>
       Route::get('/requests', [StoreJsonController::class, 'adminStoreRequests']);
       Route::get('/owners', [StoreJsonController::class, 'adminStoreOwners']);
       Route::get('/archive', [StoreJsonController::class, 'adminStoreArchive']);
+      Route::put('/accept/{id}', [StoreController::class, 'acceptStore']);
    });
 });
 

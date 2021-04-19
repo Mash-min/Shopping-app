@@ -60,4 +60,10 @@ class StoreController extends Controller
         
     }
 
+    public function acceptStore($id) {
+        $store = Store::findOrFail($id);
+        $store->update(['status' => 'active']);
+        return response()->json(['store' => $store]);
+    }
+
 }
